@@ -1,0 +1,253 @@
+/* Общие сбросы стилей и базовые настройки */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f7f9fa;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Шапка и навигация */
+header {
+    background-color: #2c3e50;
+    color: #fff;
+    padding-top: 30px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.subtitle {
+    color: #bdc3c7;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+nav {
+    background-color: #34495e;
+    margin-top: 15px;
+}
+
+nav ul {
+    list-style: none;
+    display: table; /* Использование таблицы для надежного выравнивания без flex */
+    width: 100%;
+}
+
+nav ul li {
+    display: table-cell;
+    width: auto;
+}
+
+nav ul li a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 25px;
+    text-align: center;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    background-color: #16a085;
+}
+
+/* Стили главного контента */
+main {
+    padding: 40px 0;
+    min-height: 500px;
+}
+
+h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    border-left: 5px solid #16a085;
+    padding-left: 15px;
+    font-size: 1.8rem;
+}
+
+p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* Первая страница: Hero section */
+.hero-section {
+    display: table;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.hero-text {
+    display: table-cell;
+    width: 55%;
+    vertical-align: top;
+    padding-right: 30px;
+}
+
+.hero-image {
+    display: table-cell;
+    width: 45%;
+    vertical-align: top;
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Карточки на главной */
+.features {
+    display: table;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.feature-card {
+    display: table-cell;
+    width: 50%;
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    border-top: 4px solid #16a085;
+}
+
+.feature-card:first-child {
+    padding-right: 20px;
+}
+
+.feature-card:last-child {
+    padding-left: 20px;
+}
+
+.feature-card h3 {
+    margin-bottom: 10px;
+    color: #34495e;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #16a085;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 10px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #117a65;
+}
+
+/* Вторая страница: Галерея природы */
+.image-gallery {
+    display: table;
+    width: 100%;
+    margin: 30px 0;
+}
+
+.gallery-item {
+    display: table-cell;
+    width: 50%;
+    padding: 10px;
+    vertical-align: top;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.img-caption {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    text-align: center;
+    margin-top: 8px;
+    font-style: italic;
+}
+
+/* Третья страница: Сетка Поп-Культуры */
+.pop-grid {
+    display: block;
+    margin-top: 25px;
+}
+
+.pop-card {
+    display: table;
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+}
+
+.pop-card img {
+    display: table-cell;
+    width: 250px;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-text {
+    display: table-cell;
+    vertical-align: top;
+    padding: 20px;
+}
+
+.card-text h3 {
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+/* Подвал */
+footer {
+    background-color: #2c3e50;
+    color: #bdc3c7;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    font-size: 0.9rem;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        width: 100%;
+    }
+    
+    .hero-text, .hero-image, 
+    .feature-card, .gallery-item, 
+    .pop-card img, .card-text {
+        display: block;
+        width: 100% !important;
+        padding: 10px 0 !important;
+    }
+    
+    .pop-card img {
+        height: auto;
+        max-height: 250px;
+    }
+}
